@@ -19,6 +19,7 @@
 		010000000000000000000110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010000000000000000000010 /* Assets.xcassets */; };
 		010000000000000000000112 /* BrandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010000000000000000000013 /* BrandPalette.swift */; };
 		010000000000000000000113 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010000000000000000000014 /* Localization.swift */; };
+		010000000000000000000121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 010000000000000000000124 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		010000000000000000000012 /* UlamaNacional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UlamaNacional.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010000000000000000000013 /* BrandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPalette.swift; sourceTree = "<group>"; };
 		010000000000000000000014 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		010000000000000000000122 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		010000000000000000000123 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				010000000000000000000005 /* Components.swift */,
 				010000000000000000000013 /* BrandPalette.swift */,
 				010000000000000000000014 /* Localization.swift */,
+				010000000000000000000124 /* InfoPlist.strings */,
 				010000000000000000000006 /* HomeView.swift */,
 				010000000000000000000007 /* MatchCenterView.swift */,
 				010000000000000000000008 /* TrainingView.swift */,
@@ -124,6 +128,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
 				Base,
 			);
 			mainGroup = 010000000000000000000030;
@@ -142,10 +147,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				010000000000000000000110 /* Assets.xcassets in Resources */,
+				010000000000000000000121 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		010000000000000000000124 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010000000000000000000122 /* en */,
+				010000000000000000000123 /* pt-BR */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin PBXSourcesBuildPhase section */
 		010000000000000000000050 /* Sources */ = {
@@ -298,7 +316,7 @@
 				DEVELOPMENT_TEAM = H9W6ZG9949;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Ul Nacional";
+				INFOPLIST_KEY_CFBundleDisplayName = "Ulama Nacional";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +350,7 @@
 				DEVELOPMENT_TEAM = H9W6ZG9949;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Ul Nacional";
+				INFOPLIST_KEY_CFBundleDisplayName = "Ulama Nacional";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
