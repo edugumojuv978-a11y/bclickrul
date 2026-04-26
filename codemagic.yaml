@@ -14,7 +14,7 @@ workflows:
         XCODE_PROJECT: "BClicKrul.xcodeproj"
         XCODE_SCHEME: "BClicKrul"
         BUNDLE_ID: "com.sports.bclic.krul"
-        APP_STORE_APPLE_ID: ""
+        APP_STORE_APPLE_ID: "6763876899"
 
     integrations:
       app_store_connect: codemagic
