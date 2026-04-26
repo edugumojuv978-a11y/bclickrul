@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+**/.DS_Store
 
 # Xcode
 build/
@@ -7,6 +8,9 @@ DerivedData/
 *.xcworkspace
 xcuserdata/
 *.xcuserstate
+*.xcscmblueprint
+.swiftpm/
+Package.resolved
 
 # SwiftPM
 .build/
@@ -16,16 +20,17 @@ xcuserdata/
 
 # Environment
 .env
+.env.*
 
-# Fastlane (якщо зʼявиться)
+# Fastlane
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 
-# CocoaPods (якщо додаси)
+# CocoaPods
 Pods/
 
-# Carthage (якщо буде)
+# Carthage
 Carthage/Build/
 
 # Archives
@@ -33,6 +38,7 @@ Carthage/Build/
 
 # IPA
 *.ipa
+.dSYM.zip
 
 # Certificates / secrets
 *.p12

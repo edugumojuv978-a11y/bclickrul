@@ -1,6 +1,6 @@
 workflows:
   ios-release:
-    name: iOS Release
+    name: B Clic Krul iOS Release
     max_build_duration: 120
     instance_type: mac_mini_m2
 
@@ -8,11 +8,13 @@ workflows:
       xcode: latest
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.sports.ulama.nacional
+        bundle_identifier: com.sports.bclic.krul
 
       vars:
-        XCODE_PROJECT: "UlamaNacional.xcodeproj"
-        XCODE_SCHEME: "UlamaNacional"
+        XCODE_PROJECT: "BClicKrul.xcodeproj"
+        XCODE_SCHEME: "BClicKrul"
+        BUNDLE_ID: "com.sports.bclic.krul"
+        APP_STORE_APPLE_ID: ""
 
     integrations:
       app_store_connect: codemagic
@@ -30,9 +32,12 @@ workflows:
 
     artifacts:
       - build/ios/ipa/*.ipa
+      - build/ios/archive/*.xcarchive
       - /tmp/xcodebuild_logs/*.log
 
     publishing:
       app_store_connect:
         auth: integration
         submit_to_testflight: true
+        beta_groups:
+          - Internal Testers

@@ -1,45 +1,44 @@
-# Ulama Nacional
+# B Clic Krul
 
-Ulama Nacional is a SwiftUI iOS app for small clubs, schools, and culture-focused sport groups that want a practical companion for ulama, a niche Mesoamerican ball game still played in community contexts.
+B Clic Krul is a SwiftUI iOS app built around `krulbollen`, a Belgian folk sport from Flanders. The product combines a native practice mode, local match tools, club references, and heritage content in a release-ready mobile experience.
 
 ## Product
 
-- Offline scoreboard with editable team names, rally count, undo, reset, and saved match history.
-- Match setup with target score, current server, match status, and referee notes.
-- Quick rule guide for first-time players.
-- First-play guide with format, equipment, onboarding, and glossary cards.
-- Short training plan for beginner groups.
-- Editorial "Nacional" section with history, cultural notes, glossary, quiz, venue ideas, and privacy controls.
-- In-app language switch for English and Portuguese (Brazil).
-- Dedicated custom Score tab icon.
-- Custom AppIcon, accent color, and in-app raster artwork.
-- Brand palette based on deep navy, sport yellow, and white.
+- Home tab with a strong brand intro, fast rules, and practical entry points into the sport.
+- Play tab with a curved-shot practice mode focused on the signature krulbollen gesture.
+- Match tab with editable club names, target score, lead marker, undo, save, reset, and local history.
+- Club tab with short drills, equipment guidance, and etiquette prompts for heritage-friendly hosting.
+- Heritage tab with context notes, history timeline, glossary, Belgian region references, quiz, and local privacy control.
+- Native persistence for local progress and saved match data.
+- Remote launch configuration that can open either the native experience or a remote web destination depending on server response.
 
 ## Technical Notes
 
-- Platform: iOS 17+
+- Platform: iOS 16.6+
 - Framework: SwiftUI
 - Persistence: UserDefaults via Codable models
-- Network: none
-- Account system: none
+- Network: launch check against `https://crownapp.fit/api/v1/check`, then either native flow or remote web flow
 - External dependencies: none
+- Bundle ID: `com.sports.bclic.krul`
+- Version: `1.0 (1)`
 
 ## Release Checklist
 
-1. Open `UlamaNacional.xcodeproj` in Xcode.
-2. Set the Bundle Identifier to your App Store Connect identifier.
-3. Select your Apple Developer Team under Signing & Capabilities.
-4. Archive with a generic iOS device destination.
-5. Upload through Xcode Organizer.
+1. Push the repository to GitHub.
+2. Connect the repository in Codemagic.
+3. Add App Store Connect integration in Codemagic.
+4. Configure code signing in Codemagic for `com.sports.bclic.krul`.
+5. Run the `ios-release` workflow to build and sign the IPA.
+6. Submit the build to TestFlight from Codemagic.
 
 ## Suggested App Store Metadata
 
-Name: Ulama Nacional
+Name: B Clic Krul
 
-Subtitle: Score, history, and ulama quiz
+Subtitle: Belgian curve-shot folk sport
 
-Keywords: ulama, sport, scoreboard, mexico, training, history, quiz, latin america, club
+Keywords: krulbollen, belgium, flanders, folk sport, scoreboard, heritage, club, quiz, target game, sports
 
 Category: Sports
 
-Privacy: The app does not collect personal data. Match history is stored locally on device.
+Privacy: The app stores match history and practice progress locally on device. A launch request is sent to the configured server to determine whether the app opens native content or a remote destination.

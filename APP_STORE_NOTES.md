@@ -2,16 +2,17 @@
 
 ## Review Notes
 
-Ulama Nacional is fully offline. No account, login, subscription, network request, or special permission is required.
+B Clic Krul does not require account creation, device permissions, or in-app purchase to proceed.
+
+On launch, the app performs a server check against the configured endpoint to determine whether to continue in the native app experience or open a remote web destination. The native experience includes practice, match tracking, club references, and heritage content.
 
 Main flows to test:
 
-1. Open the Score tab.
-2. Edit both team names.
-3. Add points for both teams.
-4. Save the match.
-5. Open the National tab and delete local history.
-6. Use the language picker in the National tab to switch between English and Portuguese (Brazil).
+1. Launch the app and allow the initial routing decision to complete.
+2. If the native experience opens, go to Play and complete a round of curved-shot practice.
+3. Open the Match tab, edit both side names, add points, undo one point, and save the match.
+4. Open the Clubs tab and review the club profiles.
+5. Open the Heritage tab, answer quiz questions, and delete local history.
 
 ## Age Rating Inputs
 
@@ -20,7 +21,7 @@ Main flows to test:
 - Profanity: None
 - Mature themes: None
 - User-generated content: None
-- Web access: None
+- Web access: Yes, possible through launch routing
 - Gambling: None
 
 ## Export Compliance
